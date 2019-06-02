@@ -46,22 +46,4 @@ final class RootController: UIViewController {
 
         delegate?.didLoad()
     }
-
-    private func switchTo(_ newViewController: UIViewController) {
-        addChild(newViewController)
-        newViewController.view.frame = view.bounds
-        view.addSubview(newViewController.view)
-        newViewController.didMove(toParent: self)
-
-        current.willMove(toParent: nil)
-        current.view.removeFromSuperview()
-        current.removeFromParent()
-
-        current = newViewController
-    }
-
-    func switchToLogin() {
-        let login = LoginViewController.instantiate()
-        switchTo(login)
-    }
 }

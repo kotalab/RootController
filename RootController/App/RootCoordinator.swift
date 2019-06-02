@@ -32,6 +32,10 @@ final class RootCoordinator: RootControllerDelegate {
         switchTo(MainTabController.instantiate())
     }
 
+    func switchToLogin() {
+        switchTo(LoginViewController.instantiate())
+    }
+
     private func switchTo(_ newViewController: UIViewController) {
         rootViewController.addChild(newViewController)
         newViewController.view.frame = rootViewController.view.bounds

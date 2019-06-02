@@ -27,6 +27,6 @@ final class LogoutViewController: UIViewController {
     }
 
     @IBAction func didTapLogoutButton(_ sender: Any) {
-        AppDelegate.shared.rootViewController.switchToLogin()
+        AppDelegate.shared.rootCoordinator.switchToLogin()
     }
 }
