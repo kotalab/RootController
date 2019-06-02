@@ -11,6 +11,7 @@ import UIKit
 final class RootCoordinator: RootControllerDelegate {
     let window: UIWindow
     let rootViewController: RootController
+    private (set) var currentViewController: UIViewController?
 
     init() {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -24,9 +25,19 @@ final class RootCoordinator: RootControllerDelegate {
     }
 
     func didLoad() {
-        rootViewController.addChild(rootViewController.current)
-        rootViewController.current.view.frame = rootViewController.view.bounds
-        rootViewController.view.addSubview(rootViewController.current.view)
-        rootViewController.current.didMove(toParent: rootViewController)
+        changeTo(rootViewController.current)
+    }
+
+    private func changeTo(_ newViewController: UIViewController) {
+        rootViewController.addChild(newViewController)
+        newViewController.view.frame = rootViewController.view.bounds
+        rootViewController.view.addSubview(newViewController.view)
+        newViewController.didMove(toParent: rootViewController)
+
+        currentViewController?.willMove(toParent: nil)
+        currentViewController?.view.removeFromSuperview()
+        currentViewController?.removeFromParent()
+
+        currentViewController = newViewController
     }
 }
