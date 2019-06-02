@@ -25,10 +25,14 @@ final class RootCoordinator: RootControllerDelegate {
     }
 
     func didLoad() {
-        changeTo(rootViewController.current)
+        switchTo(rootViewController.current)
     }
 
-    private func changeTo(_ newViewController: UIViewController) {
+    func switchToTab() {
+        switchTo(MainTabController.instantiate())
+    }
+
+    private func switchTo(_ newViewController: UIViewController) {
         rootViewController.addChild(newViewController)
         newViewController.view.frame = rootViewController.view.bounds
         rootViewController.view.addSubview(newViewController.view)

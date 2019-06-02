@@ -60,11 +60,6 @@ final class RootController: UIViewController {
         current = newViewController
     }
 
-    func switchToTab() {
-        let tab = MainTabController.instantiate()
-        switchTo(tab)
-    }
-
     func switchToLogin() {
         let login = LoginViewController.instantiate()
         switchTo(login)

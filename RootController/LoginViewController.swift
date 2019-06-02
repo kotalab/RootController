@@ -25,6 +25,6 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func didTapLoginButton(_ sender: Any) {
-        AppDelegate.shared.rootViewController.switchToTab()
+        AppDelegate.shared.rootCoordinator.switchToTab()
     }
 }
