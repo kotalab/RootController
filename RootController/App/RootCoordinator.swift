@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class RootCoordinator {
+final class RootCoordinator: RootControllerDelegate {
     let window: UIWindow
     let rootViewController: RootController
 
@@ -18,7 +18,15 @@ final class RootCoordinator {
     }
 
     func start() {
+        rootViewController.delegate = self
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
+    }
+
+    func didLoad() {
+        rootViewController.addChild(rootViewController.current)
+        rootViewController.current.view.frame = rootViewController.view.bounds
+        rootViewController.view.addSubview(rootViewController.current.view)
+        rootViewController.current.didMove(toParent: rootViewController)
     }
 }

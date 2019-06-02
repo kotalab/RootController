@@ -18,6 +18,10 @@ extension AppDelegate {
     }
 }
 
+protocol RootControllerDelegate {
+    func didLoad()
+}
+
 final class RootController: UIViewController {
     private init() {
         current = LoginViewController.instantiate()
@@ -35,18 +39,12 @@ final class RootController: UIViewController {
     }
 
     private (set) var current: UIViewController
+    var delegate: RootControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        switchToCurrentViewController()
-    }
-
-    private func switchToCurrentViewController() {
-        addChild(current)
-        current.view.frame = view.bounds
-        view.addSubview(current.view)
-        current.didMove(toParent: self)
+        delegate?.didLoad()
     }
 
     private func switchTo(_ newViewController: UIViewController) {
