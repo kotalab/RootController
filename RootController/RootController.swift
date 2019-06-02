@@ -14,7 +14,7 @@ extension AppDelegate {
     }
 
     var rootViewController: RootController {
-        return window!.rootViewController as! RootController
+        return rootCoordinator.window.rootViewController as! RootController
     }
 }
 

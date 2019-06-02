@@ -22,6 +22,7 @@
 		C2B1ED4121B948E2002BE893 /* MainTabController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2B1ED3F21B948E2002BE893 /* MainTabController.xib */; };
 		C2B1ED4421B949EF002BE893 /* MainContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1ED4221B949EF002BE893 /* MainContentsViewController.swift */; };
 		C2B1ED4521B949EF002BE893 /* MainContentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2B1ED4321B949EF002BE893 /* MainContentsViewController.xib */; };
+		C2E4BD4D22A35535006275B9 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E4BD4C22A35535006275B9 /* RootCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		C2B1ED3F21B948E2002BE893 /* MainTabController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabController.xib; sourceTree = "<group>"; };
 		C2B1ED4221B949EF002BE893 /* MainContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentsViewController.swift; sourceTree = "<group>"; };
 		C2B1ED4321B949EF002BE893 /* MainContentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainContentsViewController.xib; sourceTree = "<group>"; };
+		C2E4BD4C22A35535006275B9 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				C2B1ED3E21B948E2002BE893 /* MainTabController.swift */,
 				C2B1ED3F21B948E2002BE893 /* MainTabController.xib */,
 				749DFE6121B8A4F3008C5D31 /* RootController.swift */,
+				C2E4BD4C22A35535006275B9 /* RootCoordinator.swift */,
 				749DFE6221B8A4F3008C5D31 /* RootController.xib */,
 				749DFE6521B8A642008C5D31 /* SplashViewController.swift */,
 				749DFE6621B8A642008C5D31 /* SplashViewController.xib */,
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E4BD4D22A35535006275B9 /* RootCoordinator.swift in Sources */,
 				749DFE6721B8A642008C5D31 /* SplashViewController.swift in Sources */,
 				C2B1ED4021B948E2002BE893 /* MainTabController.swift in Sources */,
 				749DFE3421B8A4BA008C5D31 /* AppDelegate.swift in Sources */,
