@@ -76,7 +76,7 @@
 		749DFE3221B8A4BA008C5D31 /* RootController */ = {
 			isa = PBXGroup;
 			children = (
-				749DFE3321B8A4BA008C5D31 /* AppDelegate.swift */,
+				C2E4BD4E22A35667006275B9 /* App */,
 				C2B1ED3621B945A6002BE893 /* LoginViewController.swift */,
 				C2B1ED3721B945A6002BE893 /* LoginViewController.xib */,
 				C2B1ED3A21B94825002BE893 /* LogoutViewController.swift */,
@@ -85,9 +85,6 @@
 				C2B1ED4321B949EF002BE893 /* MainContentsViewController.xib */,
 				C2B1ED3E21B948E2002BE893 /* MainTabController.swift */,
 				C2B1ED3F21B948E2002BE893 /* MainTabController.xib */,
-				749DFE6121B8A4F3008C5D31 /* RootController.swift */,
-				C2E4BD4C22A35535006275B9 /* RootCoordinator.swift */,
-				749DFE6221B8A4F3008C5D31 /* RootController.xib */,
 				749DFE6521B8A642008C5D31 /* SplashViewController.swift */,
 				749DFE6621B8A642008C5D31 /* SplashViewController.xib */,
 				749DFE3A21B8A4BB008C5D31 /* Assets.xcassets */,
@@ -95,6 +92,17 @@
 				749DFE3F21B8A4BB008C5D31 /* Info.plist */,
 			);
 			path = RootController;
+			sourceTree = "<group>";
+		};
+		C2E4BD4E22A35667006275B9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				749DFE3321B8A4BA008C5D31 /* AppDelegate.swift */,
+				749DFE6121B8A4F3008C5D31 /* RootController.swift */,
+				C2E4BD4C22A35535006275B9 /* RootCoordinator.swift */,
+				749DFE6221B8A4F3008C5D31 /* RootController.xib */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
