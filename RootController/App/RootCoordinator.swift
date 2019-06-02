@@ -25,7 +25,7 @@ final class RootCoordinator: RootControllerDelegate {
     }
 
     func didLoad() {
-        switchTo(rootViewController.current)
+        switchTo(LoginViewController.instantiate())
     }
 
     func switchToTab() {

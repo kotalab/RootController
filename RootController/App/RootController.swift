@@ -24,8 +24,6 @@ protocol RootControllerDelegate {
 
 final class RootController: UIViewController {
     private init() {
-        current = LoginViewController.instantiate()
-//        current = SplashViewController.instantiate()
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
 
@@ -38,7 +36,6 @@ final class RootController: UIViewController {
         return vc
     }
 
-    private (set) var current: UIViewController
     var delegate: RootControllerDelegate?
 
     override func viewDidLoad() {
