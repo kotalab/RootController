@@ -8,16 +8,6 @@
 
 import UIKit
 
-extension AppDelegate {
-    static var shared: AppDelegate {
-        return UIApplication.shared.delegate as! AppDelegate
-    }
-
-    var rootViewController: RootController {
-        return rootCoordinator.window.rootViewController as! RootController
-    }
-}
-
 protocol RootControllerDelegate {
     func didLoad()
 }
